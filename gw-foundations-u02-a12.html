@@ -51,7 +51,7 @@
         <span class="text-sm font-bold text-gray-500"><i class="fa-solid fa-fire text-orange-500 mr-1"></i>Streak: <span id="streak">0</span></span>
       </div>
       <div class="text-center mb-5">
-        <p class="text-sm font-bold text-gray-500 uppercase tracking-wide">Unscramble these words</p>
+        <p class="text-sm font-bold text-gray-500 uppercase tracking-wide">Correct unscrambled sentence</p>
         <div id="scrambled" class="mt-3 bg-purple-50 border-2 border-purple-200 text-purple-950 p-4 rounded-xl text-lg sm:text-2xl font-extrabold leading-relaxed"></div>
         <h2 class="mt-5 text-xl sm:text-3xl font-black text-purple-900">Choose the correct sentence.</h2>
       </div>
@@ -63,7 +63,7 @@
     <section id="result-page" class="page flex-col w-full bg-white text-gray-800 rounded-2xl p-5 sm:p-8 shadow-2xl">
       <div class="text-center mb-6"><i class="fa-solid fa-trophy text-5xl text-yellow-500 mb-3"></i><h2 id="result-title" class="text-2xl sm:text-4xl font-black text-purple-900"></h2><p id="result-subtitle" class="text-gray-600 font-semibold mt-2"></p></div>
       <div class="overflow-auto max-h-[55vh] rounded-xl border border-gray-200">
-        <table class="w-full text-left border-collapse"><thead><tr class="bg-purple-900 text-white text-xs sm:text-sm uppercase sticky top-0"><th class="p-3 text-center">#</th><th class="p-3">Scrambled words</th><th class="p-3">Correct sentence</th><th class="p-3">Why?</th></tr></thead><tbody id="answer-table" class="divide-y divide-gray-200 text-xs sm:text-sm"></tbody></table>
+        <table class="w-full text-left border-collapse"><thead><tr class="bg-purple-900 text-white text-xs sm:text-sm uppercase sticky top-0"><th class="p-3 text-center">#</th><th class="p-3">English sentence</th><th class="p-3">Korean translation</th><th class="p-3">Why?</th></tr></thead><tbody id="answer-table" class="divide-y divide-gray-200 text-xs sm:text-sm"></tbody></table>
       </div>
       <button type="button" data-action="home" class="kahoot-btn bg-kahoot-purple text-white font-extrabold py-3 px-8 rounded-xl mx-auto mt-6"><i class="fa-solid fa-house mr-2"></i>Home</button>
     </section>
@@ -82,7 +82,7 @@
   <div id="wrong-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="wrong-title">
     <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 max-w-xl w-full text-center shadow-2xl animate__animated animate__shakeX">
       <i class="fa-solid fa-circle-xmark text-6xl text-red-600 mb-3"></i><h2 id="wrong-title" class="text-2xl font-black text-red-600">Incorrect Answer!</h2><p class="text-sm font-bold text-gray-500 mt-1 mb-5">You must restart from Question 1.</p>
-      <div class="bg-gray-50 p-4 rounded-xl text-left border space-y-3"><p><strong>Question:</strong> <span id="wrong-question"></span></p><p><strong>Correct sentence:</strong> <span id="wrong-answer" class="text-green-700 font-bold"></span></p><p class="text-purple-900"><i class="fa-solid fa-circle-info mr-1"></i><span id="wrong-explanation"></span></p></div>
+      <div class="bg-gray-50 p-4 rounded-xl text-left border space-y-3"><p><strong>Question:</strong> <span id="wrong-question"></span></p><p><strong>Correct Korean translation:</strong> <span id="wrong-answer" class="text-green-700 font-bold"></span></p><p class="text-purple-900"><i class="fa-solid fa-circle-info mr-1"></i><span id="wrong-explanation"></span></p></div>
       <button type="button" data-action="restart" class="w-full kahoot-btn answer-red text-white font-extrabold text-lg py-3 rounded-xl mt-6"><i class="fa-solid fa-rotate-right mr-2"></i>Restart from Question 1</button>
     </div>
   </div>
@@ -99,7 +99,16 @@
       { scrambled: 'the colors of yellow and red the chinese are flag', sentence: 'The colors of the Chinese flag are red and yellow.', html: 'The colors of the Chinese flag <strong>are</strong> red and yellow.', explanation: "The plural subject 'the colors' takes 'are'. 'Chinese' is a proper adjective and needs a capital letter." },
       { scrambled: 'these not are very watches expensive', sentence: 'These watches are not very expensive.', html: 'These watches <strong>are not</strong> very expensive.', explanation: "The plural subject 'these watches' takes 'are not'. 'Very' comes directly before the adjective 'expensive'." }
     ];
-    const colors = ['answer-red', 'answer-blue', 'answer-yellow', 'answer-green'];
+    const translations = [
+      { text: '내 남동생은 수학 선생님이 아니다.', html: '내 남동생은 <strong>수학 선생님이 아니다.</strong>', explanation: "'My brother' is the subject, and 'is not a math teacher' means he is not a math teacher." },
+      { text: '소피아와 에밀리는 캘리포니아 출신이 아니다.', html: '소피아와 에밀리는 <strong>캘리포니아 출신이 아니다.</strong>', explanation: "'Are not from California' means that Sofia and Emily are not from California." },
+      { text: '제임스와의 회의는 9시에 있다.', html: '제임스와의 회의는 <strong>9시에 있다.</strong>', explanation: "'My meeting with James' is the meeting, and 'at nine o’clock' gives its time." },
+      { text: '상파울루는 브라질의 수도가 아니다.', html: '상파울루는 <strong>브라질의 수도가 아니다.</strong>', explanation: "'Is not the capital of Brazil' means São Paulo is not Brazil’s capital." },
+      { text: '밴쿠버는 캐나다에 있는 매우 큰 도시다.', html: '밴쿠버는 <strong>캐나다에 있는 매우 큰 도시다.</strong>', explanation: "'A very large city in Canada' describes Vancouver’s size and location." },
+      { text: '토마토는 채소가 아니다.', html: '토마토는 <strong>채소가 아니다.</strong>', explanation: "'A tomato is not a vegetable' directly means that a tomato is not a vegetable." },
+      { text: '중국 국기의 색은 빨간색과 노란색이다.', html: '중국 국기의 색은 <strong>빨간색과 노란색이다.</strong>', explanation: "'The colors of the Chinese flag' are identified as red and yellow." },
+      { text: '이 시계들은 매우 비싸지 않다.', html: '이 시계들은 <strong>매우 비싸지 않다.</strong>', explanation: "'These watches' is plural, and 'are not very expensive' means they do not cost very much." }
+    ];    const colors = ['answer-red', 'answer-blue', 'answer-yellow', 'answer-green'];
     const icons = ['fa-square', 'fa-circle', 'fa-play', 'fa-diamond'];
     const pages = [...document.querySelectorAll('.page')];
     const teacherModal = document.querySelector('#teacher-modal');
@@ -120,9 +129,9 @@
       const current = questions[questionIndex];
       document.querySelector('#progress').textContent = `Question ${questionIndex + 1} / ${questions.length}`;
       document.querySelector('#streak').textContent = questionIndex;
-      document.querySelector('#scrambled').textContent = current.scrambled;
-      const distractors = shuffle(questions.map((q, index) => ({ ...q, sourceIndex: index })).filter(q => q.sourceIndex !== questionIndex)).slice(0, 3);
-      optionSet = shuffle([{ ...current, sourceIndex: questionIndex, correct: true }, ...distractors.map(q => ({ ...q, correct: false }))]);
+      document.querySelector('#scrambled').innerHTML = current.html;
+      const distractors = shuffle(translations.map((item, index) => ({ ...item, sourceIndex: index })).filter(item => item.sourceIndex !== questionIndex)).slice(0, 3);
+      optionSet = shuffle([{ ...translations[questionIndex], sourceIndex: questionIndex, correct: true }, ...distractors.map(item => ({ ...item, correct: false }))]);
       selectedIndex = null;
       document.querySelector('#options').innerHTML = optionSet.map((option, index) => `<button type="button" data-answer="${index}" aria-pressed="false" class="answer-card kahoot-btn ${colors[index]} text-white p-4 sm:p-5 rounded-xl text-left text-sm sm:text-base font-semibold leading-relaxed"><i class="fa-solid ${icons[index]} text-white/50 mr-2" aria-hidden="true"></i>${option.html}</button>`).join('');
       document.querySelector('#selection-alert').classList.add('hidden');
@@ -145,8 +154,8 @@
         questionIndex < questions.length ? loadQuestion() : showResults(false);
       } else {
         document.querySelector('#wrong-question').textContent = current.scrambled;
-        document.querySelector('#wrong-answer').textContent = current.sentence;
-        document.querySelector('#wrong-explanation').textContent = current.explanation;
+        document.querySelector('#wrong-answer').textContent = translations[questionIndex].text;
+        document.querySelector('#wrong-explanation').textContent = translations[questionIndex].explanation;
         showModal(wrongModal, true);
         document.querySelector('[data-action="restart"]').focus();
       }
@@ -164,7 +173,7 @@
     function showResults(teacherMode) {
       document.querySelector('#result-title').textContent = teacherMode ? 'Teacher Mode: Answer Key' : 'Congratulations! 100% Correct!';
       document.querySelector('#result-subtitle').textContent = teacherMode ? 'Complete sentences and grammar explanations.' : 'You completed all 8 questions. Review the answers below.';
-      document.querySelector('#answer-table').innerHTML = questions.map((q, i) => `<tr class="hover:bg-purple-50"><td class="p-3 text-center font-bold text-gray-500">${i + 1}</td><td class="p-3 text-gray-500">${q.scrambled}</td><td class="p-3 text-green-700 font-bold">${q.html}</td><td class="p-3 text-gray-600">${q.explanation}</td></tr>`).join('');
+      document.querySelector('#answer-table').innerHTML = questions.map((q, i) => `<tr class="hover:bg-purple-50"><td class="p-3 text-center font-bold text-gray-500">${i + 1}</td><td class="p-3 text-gray-800 font-semibold">${q.html}</td><td class="p-3 text-green-700 font-bold">${translations[i].html}</td><td class="p-3 text-gray-600">${translations[i].explanation}</td></tr>`).join('');
       showPage(document.querySelector('#result-page'));
     }
     document.addEventListener('click', (event) => {
