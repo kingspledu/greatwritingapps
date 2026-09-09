@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Great Writing Foundations Unit 2 Activity 12 scrambled-sentence quiz.">
+  <title>Great Writing Foundations: Unit 2 — Activity 12 | Scrambled Sentences</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+    body { font-family: Montserrat, sans-serif; background: #46178f; }
+    .page { display: none; }
+    .page.active { display: flex; }
+    .kahoot-btn { box-shadow: 0 6px 0 rgb(0 0 0 / 25%); transition: transform .1s, box-shadow .1s, filter .15s; }
+    .kahoot-btn:hover { filter: brightness(.92); }
+    .kahoot-btn:active { box-shadow: 0 2px 0 rgb(0 0 0 / 25%); transform: translateY(4px); }
+    .kahoot-btn:focus-visible, input:focus-visible { outline: 4px solid #fde047; outline-offset: 3px; }
+    .answer-red { background: #e21b3c; }
+    .answer-blue { background: #1368ce; }
+    .answer-yellow { background: #d89e00; }
+    .answer-green { background: #26890c; }
+    .bg-kahoot-purple { background: #46178f; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body class="min-h-screen text-white flex flex-col justify-between items-center p-4 sm:p-6">
+  <header class="w-full max-w-5xl text-center my-4 animate__animated animate__fadeInDown">
+    <p class="text-xs sm:text-sm font-extrabold tracking-widest text-yellow-300 uppercase">Great Writing Foundations: Unit 2</p>
+    <h1 class="text-xl sm:text-3xl font-black mt-1">The Simple Present of Be: <span class="text-yellow-400">ACTIVITY 12</span></h1>
+    <p class="text-sm sm:text-base text-purple-200 mt-2 font-semibold">Scrambled sentences</p>
+  </header>
+
+  <main class="w-full max-w-5xl flex-grow flex items-center justify-center my-4">
+    <section id="home-page" class="page active flex-col items-center w-full bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-10 border-2 border-white/20 text-center shadow-2xl">
+      <i class="fa-solid fa-shuffle text-6xl sm:text-8xl text-yellow-400 mb-5" aria-hidden="true"></i>
+      <h2 class="text-2xl sm:text-4xl font-extrabold">Unscramble the Sentences!</h2>
+      <p class="text-purple-100 mt-3 max-w-2xl">Choose the correctly ordered sentence. Pay attention to capital letters and punctuation.</p>
+      <p class="mt-4 p-3 bg-red-500/20 rounded-lg border border-red-400/30 text-xs sm:text-sm text-red-100"><i class="fa-solid fa-triangle-exclamation mr-1"></i> A wrong answer restarts the quiz at Question 1.</p>
+      <div class="flex flex-col sm:flex-row gap-4 w-full max-w-lg mt-8">
+        <button type="button" data-action="start" class="kahoot-btn flex-1 answer-green font-black text-lg py-4 px-6 rounded-xl"><i class="fa-solid fa-play mr-2"></i>Take the Quiz</button>
+        <button type="button" data-action="teacher" class="kahoot-btn flex-1 answer-blue font-black text-lg py-4 px-6 rounded-xl"><i class="fa-solid fa-user-tie mr-2"></i>Teacher Mode</button>
+      </div>
+    </section>
+
+    <section id="quiz-page" class="page flex-col w-full bg-white text-gray-800 rounded-2xl p-5 sm:p-8 shadow-2xl border-4 border-yellow-400">
+      <div class="flex justify-between items-center mb-5 pb-4 border-b-2 border-gray-100">
+        <span id="progress" class="bg-purple-100 text-purple-800 font-extrabold text-sm py-2 px-4 rounded-full">Question 1 / 8</span>
+        <span class="text-sm font-bold text-gray-500"><i class="fa-solid fa-fire text-orange-500 mr-1"></i>Streak: <span id="streak">0</span></span>
+      </div>
+      <div class="text-center mb-5">
+        <p class="text-sm font-bold text-gray-500 uppercase tracking-wide">Unscramble these words</p>
+        <div id="scrambled" class="mt-3 bg-purple-50 border-2 border-purple-200 text-purple-950 p-4 rounded-xl text-lg sm:text-2xl font-extrabold leading-relaxed"></div>
+        <h2 class="mt-5 text-xl sm:text-3xl font-black text-purple-900">Choose the correct sentence.</h2>
+      </div>
+      <div id="options" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+      <p id="selection-alert" class="hidden mt-5 p-3 bg-yellow-100 text-yellow-900 rounded-lg text-center font-bold" role="alert">Please select 1 more answer.</p>
+    </section>
+
+    <section id="result-page" class="page flex-col w-full bg-white text-gray-800 rounded-2xl p-5 sm:p-8 shadow-2xl">
+      <div class="text-center mb-6"><i class="fa-solid fa-trophy text-5xl text-yellow-500 mb-3"></i><h2 id="result-title" class="text-2xl sm:text-4xl font-black text-purple-900"></h2><p id="result-subtitle" class="text-gray-600 font-semibold mt-2"></p></div>
+      <div class="overflow-auto max-h-[55vh] rounded-xl border border-gray-200">
+        <table class="w-full text-left border-collapse"><thead><tr class="bg-purple-900 text-white text-xs sm:text-sm uppercase sticky top-0"><th class="p-3 text-center">#</th><th class="p-3">Scrambled words</th><th class="p-3">Correct sentence</th><th class="p-3">Why?</th></tr></thead><tbody id="answer-table" class="divide-y divide-gray-200 text-xs sm:text-sm"></tbody></table>
+      </div>
+      <button type="button" data-action="home" class="kahoot-btn bg-kahoot-purple text-white font-extrabold py-3 px-8 rounded-xl mx-auto mt-6"><i class="fa-solid fa-house mr-2"></i>Home</button>
+    </section>
+  </main>
+
+  <div id="teacher-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="teacher-title">
+    <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl">
+      <div class="flex justify-between items-center mb-4"><h2 id="teacher-title" class="text-xl font-black text-purple-900"><i class="fa-solid fa-lock text-yellow-500 mr-2"></i>Teacher Authentication</h2><button type="button" data-action="close-teacher" class="text-2xl text-gray-500" aria-label="Close">&times;</button></div>
+      <p class="text-sm text-gray-600 mb-4">Enter the teacher password to view the answer key.</p>
+      <input id="teacher-password" type="password" class="w-full p-3 border-2 border-purple-200 rounded-xl mb-4 font-bold text-center text-lg text-gray-900" placeholder="Enter password" autocomplete="current-password">
+      <p id="password-error" class="hidden text-red-600 text-sm font-bold text-center mb-4" role="alert">Incorrect password. Please try again.</p>
+      <div class="flex gap-2"><button type="button" data-action="close-teacher" class="flex-1 bg-gray-200 text-gray-700 font-bold py-3 rounded-xl">Cancel</button><button type="button" data-action="verify" class="flex-1 answer-blue text-white font-bold py-3 rounded-xl">Submit</button></div>
+    </div>
+  </div>
+
+  <div id="wrong-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="wrong-title">
+    <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 max-w-xl w-full text-center shadow-2xl animate__animated animate__shakeX">
+      <i class="fa-solid fa-circle-xmark text-6xl text-red-600 mb-3"></i><h2 id="wrong-title" class="text-2xl font-black text-red-600">Incorrect Answer!</h2><p class="text-sm font-bold text-gray-500 mt-1 mb-5">You must restart from Question 1.</p>
+      <div class="bg-gray-50 p-4 rounded-xl text-left border space-y-3"><p><strong>Question:</strong> <span id="wrong-question"></span></p><p><strong>Correct sentence:</strong> <span id="wrong-answer" class="text-green-700 font-bold"></span></p><p class="text-purple-900"><i class="fa-solid fa-circle-info mr-1"></i><span id="wrong-explanation"></span></p></div>
+      <button type="button" data-action="restart" class="w-full kahoot-btn answer-red text-white font-extrabold text-lg py-3 rounded-xl mt-6"><i class="fa-solid fa-rotate-right mr-2"></i>Restart from Question 1</button>
+    </div>
+  </div>
+
+  <footer class="text-center text-xs text-purple-300 my-4">Great Writing Foundations &bull; Unit 2 &bull; Activity 12</footer>
+  <script>
+    const questions = [
+      { scrambled: 'not is a my math brother teacher', sentence: 'My brother is not a math teacher.', html: 'My brother <strong>is not</strong> a math teacher.', explanation: "Use 'is not' after the singular subject 'my brother'. Begin with a capital letter and end with a period." },
+      { scrambled: 'california from sofia not and emily are', sentence: 'Sofia and Emily are not from California.', html: 'Sofia and Emily <strong>are not</strong> from California.', explanation: "Use 'are not' after the plural subject 'Sofia and Emily'. Proper names and California need capital letters." },
+      { scrambled: 'my with james meeting is nine at o’clock', sentence: "My meeting with James is at nine o’clock.", html: 'My meeting with James <strong>is</strong> at nine o’clock.', explanation: "The singular subject 'my meeting' takes 'is'. 'With James' stays next to 'meeting', and time uses 'at'." },
+      { scrambled: 'brazil not são paolo is the capital of', sentence: 'São Paulo is not the capital of Brazil.', html: 'São Paulo <strong>is not</strong> the capital of Brazil.', explanation: "The singular subject 'São Paulo' takes 'is not'. São Paulo and Brazil are proper names." },
+      { scrambled: 'very city in large vancouver is a canada', sentence: 'Vancouver is a very large city in Canada.', html: 'Vancouver <strong>is</strong> a very large city in Canada.', explanation: "Use 'is' after singular 'Vancouver'. The adjective phrase 'very large' comes before 'city'." },
+      { scrambled: 'vegetable a a tomato not is', sentence: 'A tomato is not a vegetable.', html: 'A tomato <strong>is not</strong> a vegetable.', explanation: "The singular subject 'a tomato' takes 'is not'. Put the article 'a' before both singular nouns." },
+      { scrambled: 'the colors of yellow and red the chinese are flag', sentence: 'The colors of the Chinese flag are red and yellow.', html: 'The colors of the Chinese flag <strong>are</strong> red and yellow.', explanation: "The plural subject 'the colors' takes 'are'. 'Chinese' is a proper adjective and needs a capital letter." },
+      { scrambled: 'these not are very watches expensive', sentence: 'These watches are not very expensive.', html: 'These watches <strong>are not</strong> very expensive.', explanation: "The plural subject 'these watches' takes 'are not'. 'Very' comes directly before the adjective 'expensive'." }
+    ];
+    const colors = ['answer-red', 'answer-blue', 'answer-yellow', 'answer-green'];
+    const icons = ['fa-square', 'fa-circle', 'fa-play', 'fa-diamond'];
+    const pages = [...document.querySelectorAll('.page')];
+    const teacherModal = document.querySelector('#teacher-modal');
+    const wrongModal = document.querySelector('#wrong-modal');
+    let questionIndex = 0;
+    let optionSet = [];
+
+    const shuffle = (items) => {
+      const copy = [...items];
+      for (let i = copy.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [copy[i], copy[j]] = [copy[j], copy[i]]; }
+      return copy;
+    };
+    const showPage = (page) => pages.forEach(item => item.classList.toggle('active', item === page));
+    const showModal = (modal, visible) => { modal.classList.toggle('hidden', !visible); modal.classList.toggle('flex', visible); };
+    function startQuiz() { questionIndex = 0; showPage(document.querySelector('#quiz-page')); loadQuestion(); }
+    function loadQuestion() {
+      const current = questions[questionIndex];
+      document.querySelector('#progress').textContent = `Question ${questionIndex + 1} / ${questions.length}`;
+      document.querySelector('#streak').textContent = questionIndex;
+      document.querySelector('#scrambled').textContent = current.scrambled;
+      const distractors = shuffle(questions.map((q, index) => ({ ...q, sourceIndex: index })).filter(q => q.sourceIndex !== questionIndex)).slice(0, 3);
+      optionSet = shuffle([{ ...current, sourceIndex: questionIndex, correct: true }, ...distractors.map(q => ({ ...q, correct: false }))]);
+      document.querySelector('#options').innerHTML = optionSet.map((option, index) => `<button type="button" data-answer="${index}" class="kahoot-btn ${colors[index]} text-white p-4 sm:p-5 rounded-xl text-left text-sm sm:text-base font-semibold leading-relaxed"><i class="fa-solid ${icons[index]} text-white/50 mr-2" aria-hidden="true"></i>${option.html}</button>`).join('');
+      document.querySelector('#selection-alert').classList.add('hidden');
+      document.querySelector('[data-answer="0"]').focus();
+    }
+    function selectAnswer(index) {
+      const choice = optionSet[index];
+      const current = questions[questionIndex];
+      if (choice.correct) {
+        questionIndex += 1;
+        questionIndex < questions.length ? loadQuestion() : showResults(false);
+      } else {
+        document.querySelector('#wrong-question').textContent = current.scrambled;
+        document.querySelector('#wrong-answer').textContent = current.sentence;
+        document.querySelector('#wrong-explanation').textContent = current.explanation;
+        showModal(wrongModal, true);
+        document.querySelector('[data-action="restart"]').focus();
+      }
+    }
+    function openTeacher() {
+      document.querySelector('#teacher-password').value = '';
+      document.querySelector('#password-error').classList.add('hidden');
+      showModal(teacherModal, true);
+      document.querySelector('#teacher-password').focus();
+    }
+    function verifyTeacher() {
+      if (document.querySelector('#teacher-password').value === '1004') { showModal(teacherModal, false); showResults(true); }
+      else { document.querySelector('#password-error').classList.remove('hidden'); document.querySelector('#teacher-password').select(); }
+    }
+    function showResults(teacherMode) {
+      document.querySelector('#result-title').textContent = teacherMode ? 'Teacher Mode: Answer Key' : 'Congratulations! 100% Correct!';
+      document.querySelector('#result-subtitle').textContent = teacherMode ? 'Complete sentences and grammar explanations.' : 'You completed all 8 questions. Review the answers below.';
+      document.querySelector('#answer-table').innerHTML = questions.map((q, i) => `<tr class="hover:bg-purple-50"><td class="p-3 text-center font-bold text-gray-500">${i + 1}</td><td class="p-3 text-gray-500">${q.scrambled}</td><td class="p-3 text-green-700 font-bold">${q.html}</td><td class="p-3 text-gray-600">${q.explanation}</td></tr>`).join('');
+      showPage(document.querySelector('#result-page'));
+    }
+    document.addEventListener('click', (event) => {
+      const answer = event.target.closest('[data-answer]');
+      const action = event.target.closest('[data-action]')?.dataset.action;
+      if (answer) selectAnswer(Number(answer.dataset.answer));
+      if (action === 'start') startQuiz();
+      if (action === 'teacher') openTeacher();
+      if (action === 'close-teacher') showModal(teacherModal, false);
+      if (action === 'verify') verifyTeacher();
+      if (action === 'restart') { showModal(wrongModal, false); startQuiz(); }
+      if (action === 'home') showPage(document.querySelector('#home-page'));
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && !teacherModal.classList.contains('hidden')) verifyTeacher();
+      if (event.key === 'Escape' && !teacherModal.classList.contains('hidden')) showModal(teacherModal, false);
+      if (document.querySelector('#quiz-page').classList.contains('active') && wrongModal.classList.contains('hidden') && ['1','2','3','4'].includes(event.key)) selectAnswer(Number(event.key) - 1);
+    });
+  </script>
+</body>
+</html>
