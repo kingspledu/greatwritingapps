@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Kahoot-style spelling quiz for Great Writing Foundations Unit 2.">
+  <title>Great Writing Foundations — Spelling Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+    :root { color-scheme: dark; }
+    body { font-family: Montserrat, sans-serif; background: #46178f; }
+    .page { display: none; }
+    .page.active { display: flex; }
+    .kahoot-btn { box-shadow: 0 6px 0 rgb(0 0 0 / 25%); transition: transform .1s, box-shadow .1s, filter .15s; }
+    .kahoot-btn:hover { filter: brightness(.92); }
+    .kahoot-btn:active { box-shadow: 0 2px 0 rgb(0 0 0 / 25%); transform: translateY(4px); }
+    .kahoot-btn:focus-visible, input:focus-visible { outline: 4px solid #fde047; outline-offset: 3px; }
+    .bg-kahoot-red { background: #e21b3c; }
+    .bg-kahoot-blue { background: #1368ce; }
+    .bg-kahoot-green { background: #26890c; }
+    .bg-kahoot-purple { background: #46178f; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body class="min-h-screen text-white flex flex-col justify-between items-center p-4 sm:p-6">
+  <header class="w-full max-w-4xl text-center my-4 animate__animated animate__fadeInDown">
+    <p class="text-xs sm:text-sm font-extrabold tracking-widest text-yellow-300 uppercase">Great Writing Foundations: Unit 2</p>
+    <h1 class="text-xl sm:text-3xl font-black mt-1 drop-shadow-md">The Simple Present of Be: <span class="text-yellow-400">ACTIVITY 10</span></h1>
+    <p class="text-xs sm:text-base text-purple-200 mt-2 font-semibold">Which spelling is correct?</p>
+  </header>
+
+  <main class="w-full max-w-3xl flex-grow flex items-center justify-center my-4">
+    <section id="page-home" class="page active flex-col items-center justify-center w-full bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-10 border-2 border-white/20 text-center shadow-2xl animate__animated animate__zoomIn" aria-labelledby="home-title">
+      <div class="mb-8">
+        <i class="fa-solid fa-spell-check text-6xl sm:text-8xl text-yellow-400 mb-4 animate__animated animate__bounce" aria-hidden="true"></i>
+        <h2 id="home-title" class="text-2xl sm:text-4xl font-extrabold">Ready for the Quiz?</h2>
+        <p class="text-purple-200 mt-2 text-sm sm:text-base">Read each pair and choose the correctly spelled word.</p>
+        <div class="mt-4 p-3 bg-red-500/20 rounded-lg border border-red-400/30 text-xs sm:text-sm text-red-100"><i class="fa-solid fa-triangle-exclamation mr-1" aria-hidden="true"></i> <strong>Warning:</strong> A wrong answer restarts the quiz at Question 1.</div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+        <button type="button" data-action="start" class="kahoot-btn flex-1 bg-kahoot-green text-white font-black text-xl py-4 px-6 rounded-xl"><i class="fa-solid fa-play mr-2" aria-hidden="true"></i>Start Quiz</button>
+        <button type="button" data-action="teacher" class="kahoot-btn flex-1 bg-kahoot-blue text-white font-black text-xl py-4 px-6 rounded-xl"><i class="fa-solid fa-user-tie mr-2" aria-hidden="true"></i>Teacher Mode</button>
+      </div>
+    </section>
+
+    <section id="page-quiz" class="page flex-col w-full bg-white text-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl border-4 border-yellow-400" aria-labelledby="quiz-title">
+      <div class="flex justify-between items-center mb-6 pb-4 border-b-2 border-gray-100">
+        <span id="quiz-progress" class="bg-purple-100 text-purple-800 font-extrabold text-sm sm:text-base py-1 px-4 rounded-full">Question 1 / 20</span>
+        <span class="text-xs sm:text-sm font-bold text-gray-500"><i class="fa-solid fa-fire text-orange-500 mr-1" aria-hidden="true"></i>Streak: <span id="streak-count" class="text-purple-700">0</span></span>
+      </div>
+      <div class="text-center mb-8">
+        <p class="text-sm sm:text-base text-gray-500 font-bold mb-2 uppercase tracking-wide">Select the correct spelling</p>
+        <h2 id="quiz-title" class="text-2xl sm:text-4xl font-black text-purple-900">Which one is correct?</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+        <button type="button" data-answer="0" class="kahoot-btn bg-kahoot-red text-white p-6 rounded-xl text-2xl sm:text-3xl font-black"><i class="fa-solid fa-square text-white/50 text-xl mr-3" aria-hidden="true"></i><span id="text-opt-0">Option 1</span></button>
+        <button type="button" data-answer="1" class="kahoot-btn bg-kahoot-blue text-white p-6 rounded-xl text-2xl sm:text-3xl font-black"><i class="fa-solid fa-circle text-white/50 text-xl mr-3" aria-hidden="true"></i><span id="text-opt-1">Option 2</span></button>
+      </div>
+    </section>
+
+    <section id="page-result" class="page flex-col w-full bg-white text-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl" aria-labelledby="result-title">
+      <div class="text-center mb-6">
+        <div class="inline-block p-4 bg-green-100 text-green-600 rounded-full mb-3"><i class="fa-solid fa-trophy text-4xl sm:text-5xl" aria-hidden="true"></i></div>
+        <h2 id="result-title" class="text-2xl sm:text-4xl font-black text-purple-900">Mastery Achieved!</h2>
+        <p id="result-subtitle" class="text-gray-600 font-semibold text-sm sm:text-base mt-1"></p>
+      </div>
+      <div class="overflow-auto max-h-96 mb-6 rounded-xl border border-gray-200">
+        <table class="w-full text-left border-collapse">
+          <thead><tr class="bg-purple-900 text-white text-xs sm:text-sm uppercase tracking-wider sticky top-0"><th class="p-3 text-center">#</th><th class="p-3">Correct spelling</th><th class="p-3">Incorrect form</th><th class="p-3">Explanation</th></tr></thead>
+          <tbody id="result-table-body" class="divide-y divide-gray-200 text-xs sm:text-sm"></tbody>
+        </table>
+      </div>
+      <div class="flex justify-center"><button type="button" data-action="home" class="kahoot-btn bg-kahoot-purple text-white font-extrabold py-3 px-8 rounded-xl"><i class="fa-solid fa-house mr-2" aria-hidden="true"></i>Home</button></div>
+    </section>
+  </main>
+
+  <div id="modal-teacher" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="teacher-title">
+    <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl animate__animated animate__fadeInDown">
+      <div class="flex justify-between items-center mb-4"><h2 id="teacher-title" class="text-xl font-black text-purple-900"><i class="fa-solid fa-lock text-yellow-500 mr-2" aria-hidden="true"></i>Teacher Authentication</h2><button type="button" data-action="close-teacher" class="text-gray-500 hover:text-gray-800 text-2xl" aria-label="Close">&times;</button></div>
+      <p class="text-sm text-gray-600 mb-4">Enter the teacher password to view the answer key.</p>
+      <input type="password" id="teacher-pass" placeholder="Enter password" class="w-full p-3 border-2 border-purple-200 rounded-xl mb-4 font-bold text-center text-lg text-gray-900" autocomplete="current-password">
+      <p id="pass-error" class="text-red-600 text-xs font-bold mb-4 hidden text-center" role="alert"><i class="fa-solid fa-circle-xmark" aria-hidden="true"></i> Incorrect password. Please try again.</p>
+      <div class="flex gap-2"><button type="button" data-action="close-teacher" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 rounded-xl">Cancel</button><button type="button" data-action="verify" class="flex-1 bg-kahoot-blue text-white font-bold py-3 rounded-xl">Submit</button></div>
+    </div>
+  </div>
+
+  <div id="modal-wrong" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="wrong-title">
+    <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 max-w-lg w-full text-center shadow-2xl animate__animated animate__shakeX">
+      <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl"><i class="fa-solid fa-xmark" aria-hidden="true"></i></div>
+      <h2 id="wrong-title" class="text-2xl font-black text-red-600 mb-1">Incorrect Answer!</h2>
+      <p class="text-sm font-bold text-gray-500 mb-6">You will restart from Question 1.</p>
+      <div class="bg-gray-50 p-4 rounded-xl text-left border border-gray-200 mb-6 space-y-2"><p class="text-sm"><strong>Your answer:</strong> <span id="wrong-user-ans" class="line-through text-red-600 font-extrabold"></span></p><p class="text-sm"><strong>Correct answer:</strong> <span id="wrong-correct-ans" class="text-green-700 font-extrabold"></span></p><hr><p class="text-xs sm:text-sm text-purple-900 font-semibold"><i class="fa-solid fa-circle-info text-purple-600 mr-1" aria-hidden="true"></i><span id="wrong-explanation"></span></p></div>
+      <button type="button" data-action="restart" class="w-full kahoot-btn bg-kahoot-red text-white font-extrabold text-lg py-3 rounded-xl"><i class="fa-solid fa-rotate-right mr-2" aria-hidden="true"></i>Restart from Question 1</button>
+    </div>
+  </div>
+
+  <footer class="text-center text-xs text-purple-300 my-4 font-medium">Great Writing Foundations &bull; Interactive Educational Activity</footer>
+  <script>
+    const wordData = [
+      ['weather','wether',"The noun for climate conditions is spelled 'weather' with 'ea'."], ['went','wint',"The past tense of 'go' is 'went' with the vowel 'e'."], ['bed','baid',"The item used for sleeping is spelled 'bed'."], ['ready','raidy',"'Ready' uses 'ea' for the short /e/ sound."], ['says','sais',"The third-person singular of 'say' is 'says'."], ['hello','heallo',"The standard greeting is spelled 'hello'."], ['many','meny',"'Many' is spelled with an 'a' despite its short /e/ sound."], ['again','agein',"'Again' uses 'ai' in the second syllable."], ['breakfast','brekfast',"'Breakfast' combines 'break' and 'fast'."], ['friend','frend',"'Friend' contains the letter pair 'ie'."], ['seven','sevn',"'Seven' needs the second 'e'."], ['already','alredy',"'Already' keeps 'ea' in 'ready'."], ['any','eny',"'Any' is spelled with 'a', like 'many'."], ['bread','bred',"The food made from flour is 'bread' with 'ea'."], ['dead','ded',"'Dead' uses 'ea' for the short /e/ sound."], ['well','weall',"'Well' is spelled with 'e' and double 'l'."], ['tell','tel',"'Tell' ends with double 'l'."], ['test','tst',"'Test' needs the vowel 'e'."], ['spell','spll',"'Spell' needs 'e' and double 'l'."], ['egg','eagg',"'Egg' has one 'e' followed by double 'g'."]
+    ].map(([correct, wrong, explanation], index) => ({ id: index + 1, correct, wrong, explanation }));
+
+    const $ = (selector) => document.querySelector(selector);
+    const pages = [...document.querySelectorAll('.page')];
+    const teacherModal = $('#modal-teacher');
+    const wrongModal = $('#modal-wrong');
+    let currentQuestionIndex = 0;
+    let currentOptions = [];
+
+    function showPage(page) { pages.forEach((item) => item.classList.toggle('active', item === page)); }
+    function toggleModal(modal, open) { modal.classList.toggle('hidden', !open); modal.classList.toggle('flex', open); }
+    function startQuiz() { currentQuestionIndex = 0; showPage($('#page-quiz')); loadQuestion(); }
+    function loadQuestion() {
+      const item = wordData[currentQuestionIndex];
+      $('#quiz-progress').textContent = `Question ${currentQuestionIndex + 1} / ${wordData.length}`;
+      $('#streak-count').textContent = currentQuestionIndex;
+      currentOptions = Math.random() < .5 ? [{ text: item.correct, correct: true }, { text: item.wrong, correct: false }] : [{ text: item.wrong, correct: false }, { text: item.correct, correct: true }];
+      $('#text-opt-0').textContent = currentOptions[0].text;
+      $('#text-opt-1').textContent = currentOptions[1].text;
+      document.querySelector('[data-answer="0"]').focus();
+    }
+    function selectAnswer(index) {
+      const choice = currentOptions[index];
+      const item = wordData[currentQuestionIndex];
+      if (choice.correct) {
+        currentQuestionIndex += 1;
+        currentQuestionIndex < wordData.length ? loadQuestion() : showResults(false);
+        return;
+      }
+      $('#wrong-user-ans').textContent = choice.text;
+      $('#wrong-correct-ans').textContent = item.correct;
+      $('#wrong-explanation').textContent = item.explanation;
+      toggleModal(wrongModal, true);
+      document.querySelector('[data-action="restart"]').focus();
+    }
+    function openTeacher() { $('#teacher-pass').value = ''; $('#pass-error').classList.add('hidden'); toggleModal(teacherModal, true); $('#teacher-pass').focus(); }
+    function verifyPassword() {
+      if ($('#teacher-pass').value === '1004') { toggleModal(teacherModal, false); showResults(true); }
+      else { $('#pass-error').classList.remove('hidden'); $('#teacher-pass').select(); }
+    }
+    function showResults(teacherMode) {
+      $('#result-title').textContent = teacherMode ? 'Teacher Mode: Word List' : 'Congratulations! 100% Correct!';
+      $('#result-subtitle').textContent = teacherMode ? 'Full vocabulary list with spellings and explanations:' : 'You completed all 20 questions. Review the word list below:';
+      $('#result-table-body').innerHTML = wordData.map((item) => `<tr class="hover:bg-purple-50"><td class="p-3 text-center font-bold text-gray-500">${item.id}</td><td class="p-3 font-extrabold text-green-700 bg-green-50/50">${item.correct}</td><td class="p-3 font-bold text-red-600 line-through">${item.wrong}</td><td class="p-3 text-gray-600 font-medium">${item.explanation}</td></tr>`).join('');
+      showPage($('#page-result'));
+    }
+
+    document.addEventListener('click', (event) => {
+      const answer = event.target.closest('[data-answer]');
+      const action = event.target.closest('[data-action]')?.dataset.action;
+      if (answer) selectAnswer(Number(answer.dataset.answer));
+      if (action === 'start') startQuiz();
+      if (action === 'teacher') openTeacher();
+      if (action === 'close-teacher') toggleModal(teacherModal, false);
+      if (action === 'verify') verifyPassword();
+      if (action === 'restart') { toggleModal(wrongModal, false); startQuiz(); }
+      if (action === 'home') showPage($('#page-home'));
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && !teacherModal.classList.contains('hidden')) verifyPassword();
+      if (event.key === 'Escape' && !teacherModal.classList.contains('hidden')) toggleModal(teacherModal, false);
+      if ($('#page-quiz').classList.contains('active') && wrongModal.classList.contains('hidden') && ['1','2'].includes(event.key)) selectAnswer(Number(event.key) - 1);
+    });
+  </script>
+</body>
+</html>
