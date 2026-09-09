@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Great Writing Foundations Unit 2 Activity 12 scrambled-sentence quiz.">
-  <title>Great Writing Foundations: Unit 2 — Activity 12 | Scrambled Sentences</title>
+  <title>Great Writing Foundations: Unit 2. The Simple Present of Be: ACTIVITY 12 | Scrambled sentences</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -21,6 +21,7 @@
     .answer-blue { background: #1368ce; }
     .answer-yellow { background: #d89e00; }
     .answer-green { background: #26890c; }
+    .answer-card[aria-pressed="true"] { outline: 5px solid #46178f; outline-offset: 3px; transform: translateY(-2px); }
     .bg-kahoot-purple { background: #46178f; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
@@ -54,8 +55,9 @@
         <div id="scrambled" class="mt-3 bg-purple-50 border-2 border-purple-200 text-purple-950 p-4 rounded-xl text-lg sm:text-2xl font-extrabold leading-relaxed"></div>
         <h2 class="mt-5 text-xl sm:text-3xl font-black text-purple-900">Choose the correct sentence.</h2>
       </div>
-      <div id="options" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+      <div id="options" class="grid grid-cols-1 sm:grid-cols-2 gap-4" role="group" aria-label="Answer choices"></div>
       <p id="selection-alert" class="hidden mt-5 p-3 bg-yellow-100 text-yellow-900 rounded-lg text-center font-bold" role="alert">Please select 1 more answer.</p>
+      <button type="button" data-action="check" class="kahoot-btn bg-kahoot-purple text-white font-black text-lg py-3 px-10 rounded-xl mx-auto mt-5"><i class="fa-solid fa-check mr-2"></i>Check Answer</button>
     </section>
 
     <section id="result-page" class="page flex-col w-full bg-white text-gray-800 rounded-2xl p-5 sm:p-8 shadow-2xl">
@@ -104,6 +106,7 @@
     const wrongModal = document.querySelector('#wrong-modal');
     let questionIndex = 0;
     let optionSet = [];
+    let selectedIndex = null;
 
     const shuffle = (items) => {
       const copy = [...items];
@@ -120,12 +123,22 @@
       document.querySelector('#scrambled').textContent = current.scrambled;
       const distractors = shuffle(questions.map((q, index) => ({ ...q, sourceIndex: index })).filter(q => q.sourceIndex !== questionIndex)).slice(0, 3);
       optionSet = shuffle([{ ...current, sourceIndex: questionIndex, correct: true }, ...distractors.map(q => ({ ...q, correct: false }))]);
-      document.querySelector('#options').innerHTML = optionSet.map((option, index) => `<button type="button" data-answer="${index}" class="kahoot-btn ${colors[index]} text-white p-4 sm:p-5 rounded-xl text-left text-sm sm:text-base font-semibold leading-relaxed"><i class="fa-solid ${icons[index]} text-white/50 mr-2" aria-hidden="true"></i>${option.html}</button>`).join('');
+      selectedIndex = null;
+      document.querySelector('#options').innerHTML = optionSet.map((option, index) => `<button type="button" data-answer="${index}" aria-pressed="false" class="answer-card kahoot-btn ${colors[index]} text-white p-4 sm:p-5 rounded-xl text-left text-sm sm:text-base font-semibold leading-relaxed"><i class="fa-solid ${icons[index]} text-white/50 mr-2" aria-hidden="true"></i>${option.html}</button>`).join('');
       document.querySelector('#selection-alert').classList.add('hidden');
       document.querySelector('[data-answer="0"]').focus();
     }
     function selectAnswer(index) {
-      const choice = optionSet[index];
+      selectedIndex = index;
+      document.querySelectorAll('[data-answer]').forEach((button, buttonIndex) => button.setAttribute('aria-pressed', String(buttonIndex === index)));
+      document.querySelector('#selection-alert').classList.add('hidden');
+    }
+    function checkAnswer() {
+      if (selectedIndex === null) {
+        document.querySelector('#selection-alert').classList.remove('hidden');
+        return;
+      }
+      const choice = optionSet[selectedIndex];
       const current = questions[questionIndex];
       if (choice.correct) {
         questionIndex += 1;
@@ -162,12 +175,14 @@
       if (action === 'teacher') openTeacher();
       if (action === 'close-teacher') showModal(teacherModal, false);
       if (action === 'verify') verifyTeacher();
+      if (action === 'check') checkAnswer();
       if (action === 'restart') { showModal(wrongModal, false); startQuiz(); }
       if (action === 'home') showPage(document.querySelector('#home-page'));
     });
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' && !teacherModal.classList.contains('hidden')) verifyTeacher();
       if (event.key === 'Escape' && !teacherModal.classList.contains('hidden')) showModal(teacherModal, false);
+      if (event.key === 'Enter' && document.querySelector('#quiz-page').classList.contains('active') && teacherModal.classList.contains('hidden') && wrongModal.classList.contains('hidden')) checkAnswer();
       if (document.querySelector('#quiz-page').classList.contains('active') && wrongModal.classList.contains('hidden') && ['1','2','3','4'].includes(event.key)) selectAnswer(Number(event.key) - 1);
     });
   </script>
