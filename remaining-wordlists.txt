@@ -1,0 +1,406 @@
+[1|Sentences|9|6|a in Cat]
+add|더하다
+after|~후에
+am|~이다: I와 쓰는 be동사
+and|그리고
+animal|동물
+answer|대답·답하다
+apple|사과
+ask|묻다
+at|~에
+bad|나쁜
+bag|가방
+banana|바나나
+bank|은행
+bath|목욕
+black|검은
+can|~할 수 있다
+cat|고양이
+class|수업·학급
+examples|예들
+family|가족
+fast|빠른
+flag|깃발·국기
+glass|유리·유리잔
+hand|손
+happen|일어나다
+happy|행복한
+has|가지고 있다: have의 3인칭 단수형
+have|가지다
+January|1월
+language|언어
+last|마지막의
+man|남자
+map|지도
+math|수학
+nap|낮잠
+sad|슬픈
+salad|샐러드
+taxi|택시
+thank|감사하다
+that|그·저
+travel|여행하다
+understand|이해하다
+aunt|이모·고모·숙모
+laugh|웃다
+[2|The Simple Present of Be|22|5|e in Bed]
+bed|침대
+best|가장 좋은
+check|확인하다
+egg|달걀
+end|끝·끝나다
+enter|들어가다
+every|모든
+exercise|운동·연습
+get|얻다
+hello|안녕하세요
+help|돕다
+left|왼쪽의
+leg|다리
+let|~하게 하다
+men|남자들
+necessary|필요한
+never|결코 ~않는
+next|다음의
+pen|펜
+pet|반려동물
+red|빨간
+sell|팔다
+seven|일곱
+spell|철자를 쓰다
+tell|말하다
+ten|열
+test|시험
+text|글·본문
+well|잘
+went|갔다
+west|서쪽
+when|언제
+yellow|노란
+yes|네
+already|이미
+bread|빵
+breakfast|아침 식사
+dead|죽은
+head|머리
+ready|준비된
+weather|날씨
+again|다시
+any|어떤·조금의
+friend|친구
+many|많은
+said|말했다
+says|말한다
+[3|The Simple Present|40|8|i in Fish]
+big|큰
+bridge|다리·교량
+chicken|닭·닭고기
+city|도시
+delicious|맛있는
+did|했다: do의 과거형
+different|다른
+difficult|어려운
+dinner|저녁 식사
+drink|마시다·음료
+fish|물고기·생선
+give|주다
+him|그를·그에게
+his|그의
+if|만약 ~라면
+in|~안에
+interesting|흥미로운
+is|~이다: be동사 단수형
+it|그것
+kitchen|부엌
+list|목록
+little|작은·적은
+live|살다
+milk|우유
+minute|분
+pink|분홍색의
+ring|반지
+sick|아픈
+sing|노래하다
+sister|자매
+sit|앉다
+six|여섯
+swim|수영하다
+thing|것·물건
+think|생각하다
+this|이·이것
+which|어느·어떤
+will|~할 것이다
+win|이기다
+winter|겨울
+with|~와 함께
+been|be의 과거분사형
+busy|바쁜
+pretty|예쁜
+women|여자들
+[8|Articles|118|11|i in Rice]
+arrive|도착하다
+bike|자전거
+decide|결정하다
+drive|운전하다
+fire|불·화재
+ice|얼음
+inside|안에·안쪽
+knife|칼
+life|삶·생명
+like|좋아하다·~처럼
+mine|나의 것
+nice|좋은·친절한
+nine|아홉
+price|가격
+rice|쌀·밥
+ride|타다
+size|크기
+smile|미소·미소 짓다
+time|시간
+times|~번·회
+white|흰색의
+wife|아내
+write|쓰다
+by|~옆에·~로
+cry|울다
+dry|마른
+fly|날다
+July|7월
+my|나의
+sky|하늘
+try|시도하다
+why|왜
+fight|싸우다·싸움
+flight|비행·항공편
+light|빛·가벼운
+night|밤
+right|올바른·오른쪽의
+tonight|오늘 밤
+behind|~뒤에
+find|찾다
+kind|친절한·종류
+die|죽다
+lie|눕다·거짓말하다
+tie|넥타이·묶다
+buy|사다
+bye|안녕: 헤어질 때
+eye|눈
+high|높은
+I|나
+idea|생각·아이디어
+pilot|조종사
+quiet|조용한
+silent|말 없는·고요한
+type|종류·타자를 치다
+[9|Prepositions|136|11|o in Hello]
+ago|~전에
+also|또한
+both|둘 다
+go|가다
+hello|안녕하세요
+hotel|호텔
+most|대부분의·가장
+nobody|아무도 ~않다
+November|11월
+ocean|대양
+October|10월
+only|오직
+open|열다·열린
+so|그래서·매우
+alone|혼자
+close|닫다
+clothes|옷
+home|집
+hope|희망·바라다
+joke|농담
+nose|코
+note|메모·주목하다
+phone|전화
+smoke|연기·담배를 피우다
+stove|스토브·가스레인지
+telephone|전화기
+below|~아래에
+follow|따라가다
+grow|자라다
+know|알다
+low|낮은
+own|자신의·소유하다
+show|보여 주다
+slow|느린
+snow|눈
+tomorrow|내일
+window|창문
+yellow|노란
+boat|배
+coach|코치·지도하다
+coast|해안
+coat|외투
+goal|목표·득점
+road|도로
+soap|비누
+cold|추운
+gold|금
+old|오래된·나이 든
+told|말했다
+goes|간다
+toe|발가락
+although|비록 ~이지만
+[10|Simple and Compound Sentences|151|7|oo in School]
+choose|고르다
+cool|시원한·멋진
+food|음식
+noon|정오
+pool|수영장
+poor|가난한
+room|방
+school|학교
+soon|곧
+spoon|숟가락
+too|또한·너무
+tooth|치아
+zoo|동물원
+blue|파란
+true|사실인
+Tuesday|화요일
+include|포함하다
+June|6월
+rule|규칙
+few|거의 없는·소수의
+knew|알았다
+new|새로운
+news|소식·뉴스
+newspaper|신문
+group|집단·무리
+soup|수프
+you|너·여러분
+do|하다
+to|~로·~에게
+two|둘
+who|누구
+fruit|과일
+juice|주스
+suitcase|여행 가방
+computer|컴퓨터
+confused|혼란스러운
+music|음악
+use|사용하다
+shoe|신발
+student|학생
+who’s|who is의 줄임말
+whose|누구의
+[11|The Simple Past|169|8|aw in Straw]
+awful|끔찍한
+draw|그리다
+drawer|서랍
+law|법
+raw|날것의
+saw|보았다
+straw|빨대·짚
+August|8월
+author|저자
+automobile|자동차
+autumn|가을
+caught|잡았다
+cause|원인·일으키다
+daughter|딸
+laundry|세탁물·빨래
+sauce|소스
+taught|가르쳤다
+all|모든
+ball|공
+call|전화하다·부르다
+fall|떨어지다·가을
+mall|쇼핑몰
+small|작은
+tall|키가 큰
+wall|벽
+almost|거의
+also|또한
+always|항상
+salt|소금
+talk|말하다
+walk|걷다
+bought|샀다
+brought|가져왔다
+cough|기침·기침하다
+thought|생각했다·생각
+long|긴
+song|노래
+strong|강한
+wrong|틀린
+[12|Complex Sentences|188|10|oo in Wood]
+book|책
+cook|요리하다·요리사
+cookie|쿠키
+foot|발
+good|좋은
+look|보다
+stood|서 있었다
+took|가져갔다·했다
+wood|나무·목재
+wool|양모
+understood|이해했다
+bull|황소
+bush|덤불
+full|가득 찬
+pull|당기다
+push|밀다
+put|놓다
+sugar|설탕
+could|~할 수 있었다
+should|~해야 한다
+would|~할 것이다·~하곤 했다
+woman|여자
+[13|Adverbs|204|7|ow in Flower]
+about|~에 관하여·약
+around|~주위에
+cloud|구름
+count|세다
+flour|밀가루
+found|찾았다
+ground|땅
+hour|시간
+house|집
+loud|시끄러운
+mountain|산
+mouse|생쥐
+mouth|입
+our|우리의
+out|밖에
+pound|파운드
+round|둥근
+shout|외치다
+sound|소리
+sour|신맛의
+south|남쪽
+allow|허락하다
+bow|절하다·절
+brown|갈색의
+cow|암소
+crowded|붐비는
+down|아래로
+flower|꽃
+how|어떻게
+now|지금
+power|힘·전력
+shower|샤워
+towel|수건
+town|도시·읍
+vowel|모음
+[14|The Present Progressive|219|6|oy in Boy]
+boy|소년
+destroy|파괴하다
+employee|직원
+employer|고용주
+enjoy|즐기다
+joy|기쁨
+toy|장난감
+boil|끓이다
+choice|선택
+coin|동전
+join|참여하다
+noise|소음
+oil|기름
+point|점·가리키다
+poison|독
+voice|목소리

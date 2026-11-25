@@ -1,0 +1,1006 @@
+[1|101|문법 어휘|4–5|grammar]
+sentence|문장
+subject|주어
+verb|동사
+complete|완전한
+idea|생각
+word|단어
+beginning|시작
+middle|중간
+capital|대문자의
+letter|글자
+statement|평서문
+question|질문·의문문
+period|마침표
+punctuation|문장 부호
+missing|빠진
+correct|올바른
+order|순서
+[1|201|Activity 어휘|5–15|words]
+bananas|바나나들
+apples|사과들
+green|초록색의
+carrot|당근
+cabbage|양배추
+eggplant|가지
+purple|보라색의
+orange|오렌지·주황색의
+watermelon|수박
+blackberry|블랙베리
+fruit|과일
+broccoli|브로콜리
+tomatoes|토마토들
+lime|라임
+lemon|레몬
+favorite|가장 좋아하는
+vegetable|채소
+first name|이름
+last name|성
+years old|~살의
+Canada|캐나다
+Vancouver|밴쿠버
+bird|새
+parrot|앵무새
+colors|색깔들
+beautiful|아름다운
+smart|똑똑한
+talk|말하다
+back|등·뒤
+student|학생
+study|공부하다
+English class|영어 수업
+very much|매우
+tuna salad|참치 샐러드
+a lot|많이
+apple juice|사과 주스
+books|책들
+lunch|점심 식사
+the world|세계
+the United States|미국
+opposite|반대
+wild animal|야생 동물
+lion|사자
+child|아이
+brothers|형제들
+sisters|자매들
+oldest|가장 나이 많은
+youngest|가장 어린
+twenty-two|스물둘
+fifteen|열다섯
+parents|부모님
+[2|101|문법 어휘|18–21|grammar]
+be|~이다·있다
+affirmative|긍정의
+negative|부정의
+subject|주어
+singular|단수의
+plural|복수의
+contraction|축약형
+apostrophe|아포스트로피
+formal|격식 있는
+informal|격식 없는
+speaking|말하기
+writing|쓰기
+noun|명사
+adjective|형용사
+place|장소
+time|시간
+phrase|구
+pattern|문형·패턴
+am|~이다: I의 be동사
+is|~이다: 단수 be동사
+are|~이다: 복수·you의 be동사
+not|~아니다
+isn’t|is not의 줄임말
+aren’t|are not의 줄임말
+[2|201|Activity 어휘|18–29|words]
+second language|제2언어
+classmates|반 친구들
+different countries|서로 다른 나라들
+the same age|같은 나이
+fun|재미있는
+teacher|교사
+Italy|이탈리아
+China|중국
+Brazil|브라질
+Japan|일본
+Saudi Arabia|사우디아라비아
+Guatemala|과테말라
+Tokyo|도쿄
+New York|뉴욕
+small city|작은 도시
+sushi|초밥
+maki|김초밥
+Greece|그리스
+gold ring|금반지
+cheap gift|값싼 선물
+smart student|똑똑한 학생
+California|캘리포니아
+meeting|회의
+eleven o’clock|11시
+kitchen|부엌
+expensive|비싼
+good cook|요리를 잘하는 사람
+cousins|사촌들
+excellent swimmer|뛰어난 수영 선수
+trip|여행
+India|인도
+next month|다음 달
+math books|수학책들
+boat|배
+easy questions|쉬운 문제들
+football|미식축구·축구
+tennis|테니스
+sports|스포츠
+heavy|무거운
+capital|수도
+large city|큰 도시
+tomato|토마토
+Chinese flag|중국 국기
+watches|손목시계들
+Ecuador|에콰도르
+South America|남아메리카
+equator|적도
+million|백만
+tourists|관광객들
+mountains|산들
+islands|섬들
+birthday|생일
+sandwich|샌드위치
+meat|고기
+dinner|저녁 식사
+photo|사진
+the Middle East|중동
+Seoul|서울
+Korea|한국
+Costa Rica|코스타리카
+Busan|부산
+friends|친구들
+[3|101|문법 어휘|32–39|grammar]
+present|현재
+affirmative|긍정의
+negative|부정의
+base|기본의
+form|형태
+regular|규칙적인
+irregular|불규칙적인
+verb|동사
+subject|주어
+consonant|자음
+vowel|모음
+final|마지막의
+ending|어미
+common|흔한
+add|더하다
+change|바꾸다
+do|하다
+does|do의 3인칭 단수형
+have|가지다
+has|have의 3인칭 단수형
+go|가다
+goes|go의 3인칭 단수형
+don’t|do not의 줄임말
+doesn’t|does not의 줄임말
+[3|201|문법 예시·Activity 동사|32–47|words]
+come|오다
+find|찾다
+get|얻다
+know|알다
+like|좋아하다
+look|보다
+make|만들다
+say|말하다
+see|보다
+take|가져가다·하다
+use|사용하다
+work|일하다
+begin|시작하다
+arrive|도착하다
+drive|운전하다
+eat|먹다
+fly|날다
+run|달리다
+sit|앉다
+teach|가르치다
+finish|끝내다
+pass|지나가다·통과하다
+fix|고치다
+miss|놓치다·그리워하다
+catch|잡다
+buzz|윙윙거리다
+push|밀다
+study|공부하다
+carry|나르다
+buy|사다
+stay|머무르다
+hurry|서두르다
+try|시도하다
+enjoy|즐기다
+meet|만나다
+talk|말하다
+sleep|자다
+wake|깨다
+need|필요하다
+pay|지불하다
+send|보내다
+watch|보다
+worry|걱정하다
+visit|방문하다
+stop|멈추다
+leave|떠나다
+celebrate|기념하다
+wish|바라다
+hope|바라다
+start|시작하다
+[3|202|Activity 어휘·청크|33–47|words]
+cell phone|휴대전화
+take a picture|사진을 찍다
+take a shower|샤워하다
+eat breakfast|아침을 먹다
+language club|언어 동아리
+after school|방과 후에
+giraffes|기린들
+leaves|나뭇잎들
+horses|말들
+monkeys|원숭이들
+trees|나무들
+birds|새들
+bees|벌들
+honey|꿀
+mailman|우편배달부
+wash|씻다
+quiz|짧은 시험
+chef|요리사
+mix|섞다
+ingredients|재료들
+baby|아기
+team|팀
+taxi driver|택시 기사
+interesting job|흥미로운 직업
+conversation|대화
+make breakfast|아침을 만들다
+popcorn|팝콘
+typical|전형적인
+morning|아침
+sentence|문장
+president|사장·대통령
+company|회사
+free time|자유 시간
+New Year’s|새해 명절
+midnight|자정
+December|12월
+grapes|포도
+month|달·월
+special|특별한
+spring|봄
+plants|식물들
+store|가게
+office|사무실
+exam|시험
+daily routine|일과
+cafeteria|구내식당
+soccer practice|축구 연습
+homework|숙제
+tired|피곤한
+[8|101|문법 어휘|110–115|grammar]
+article|관사
+zero|영의·없는
+count|세다·가산의
+non-count|불가산의
+noun|명사
+singular|단수의
+plural|복수의
+general|일반적인
+specific|특정한
+meaning|의미
+sound|소리
+vowel|모음
+consonant|자음
+adjective|형용사
+definite|한정된
+indefinite|불특정한
+a|하나의: 부정관사
+an|하나의: 모음 소리 앞 부정관사
+the|그: 정관사
+[8|201|문법 예시·Activity 어휘|110–117|words]
+zebra|얼룩말
+animal|동물
+sentence|문장
+comma|쉼표
+title|제목
+lions|사자들
+elephants|코끼리들
+money|돈
+bank|은행
+photo|사진
+park|공원
+flowers|꽃들
+woman|여자
+lake|호수
+relax|쉬다
+letter|편지
+mail|우편
+homework|숙제
+test|시험
+dollars|달러
+sofa|소파
+furniture|가구
+advice|조언
+opinion|의견
+storm|폭풍
+weekend|주말
+hour|시간
+umbrella|우산
+university|대학교
+bridge|다리
+dream|꿈
+dress|드레스
+ugly|못생긴
+headphones|헤드폰
+email|이메일
+onion|양파
+dictionary|사전
+nickel|5센트 동전
+rose|장미
+bee|벌
+parrot|앵무새
+stripes|줄무늬
+electronic message|전자 메시지
+insect|곤충
+wings|날개들
+teapot|찻주전자
+stove|가스레인지
+pencil|연필
+garden|정원
+Portuguese|포르투갈어
+reason|이유
+job|일·직업
+sandwich|샌드위치
+mustard|겨자
+slices|얇게 썬 조각들
+river|강
+sea|바다
+ocean|대양
+coast|해안
+desert|사막
+mountains|산들
+continent|대륙
+museum|박물관
+hotel|호텔
+city|도시
+[8|202|문장 연습·쓰기 어휘|121–125|words]
+usually|보통
+everything|모든 것
+study|공부하다
+socks|양말들
+scrambled eggs|스크램블 에그
+a little milk|약간의 우유
+oil|기름
+salt|소금
+pepper|후추
+bowl|그릇
+mix|섞다
+pan|팬
+cook|요리하다
+delicious|맛있는
+reading book|독해 교재
+grammar book|문법 교재
+interesting stories|흥미로운 이야기들
+keys|열쇠들
+quit|그만두다
+stay in touch|연락을 유지하다
+class project|수업 과제
+wet|젖은
+tuna salad|참치 샐러드
+mayonnaise|마요네즈
+chopped onions|잘게 썬 양파
+hard-boiled egg|완숙 달걀
+boiled potatoes|삶은 감자
+[9|101|문법 어휘|128–135|grammar]
+preposition|전치사
+relationship|관계
+noun|명사
+phrase|구
+object|목적어
+pronoun|대명사
+time|시간
+place|장소
+address|주소
+season|계절
+decade|10년
+period|기간
+beginning|시작
+combination|결합
+about|~에 관하여
+after|~뒤에
+at|~에
+before|~전에
+between|~사이에
+by|~옆에·~로
+down|~아래로
+for|~을 위해
+from|~로부터
+in|~안에
+near|~가까이에
+of|~의
+on|~위에
+to|~로
+under|~아래에
+up|~위로
+with|~와 함께
+without|~없이
+[9|201|Activity 어휘·청크|128–143|words]
+high school student|고등학생
+last year|마지막 해·작년
+by bus|버스로
+at noon|정오에
+at midnight|자정에
+on Monday|월요일에
+in January|1월에
+in winter|겨울에
+at school|학교에서
+on Main Street|메인 스트리트에
+cashiers|계산원들
+grocery stores|식료품점들
+bookstore|서점
+restaurant|식당
+post office|우체국
+supermarket|슈퍼마켓
+library|도서관
+apartment|아파트
+downtown|도심
+photo ID|사진 신분증
+listen to music|음악을 듣다
+look at|~을 보다
+look for|~을 찾다
+wait for|~을 기다리다
+afraid of|~을 두려워하는
+different from|~와 다른
+far from|~에서 먼
+happy about|~에 기뻐하는
+interested in|~에 관심 있는
+married to|~와 결혼한
+similar to|~와 비슷한
+worried about|~에 걱정하는
+parking space|주차 공간
+art|미술
+the future|미래
+grades|성적들
+flight schedules|항공편 일정들
+international airlines|국제 항공사들
+one day|하루
+the next day|다음 날
+pyramids|피라미드들
+famous buildings|유명한 건물들
+fast trains|빠른 열차들
+heavy coat|두꺼운 외투
+pairs of shoes|신발 켤레들
+millions of tourists|수백만 관광객들
+temperature|기온
+warm|따뜻한
+perfect time|완벽한 시간
+sightseeing|관광
+take pictures|사진을 찍다
+paintings|그림들
+canals|운하들
+[10|101|문법 어휘|146–147|grammar]
+simple|단순한
+compound|중문의
+sentence|문장
+subject|주어
+verb|동사
+combination|조합
+connector|연결어
+coordinating|등위의
+conjunction|접속사
+comma|쉼표
+information|정보
+opposite|반대의
+result|결과
+and|그리고
+but|그러나
+so|그래서
+[10|201|문법 예시·Activity 어휘|146–150|words]
+whales|고래들
+elephants|코끼리들
+mammals|포유류들
+warm-blooded|온혈의
+feed|먹이다
+babies|아기들
+milk|우유
+snakes|뱀들
+reptiles|파충류들
+sharks|상어들
+breathe air|공기로 숨 쉬다
+early meeting|이른 회의
+capital|수도
+alphabets|알파벳들
+sweet|단맛의
+juicy|즙이 많은
+apple pie|사과 파이
+dessert|후식
+classmates|반 친구들
+married|결혼한
+on sale|할인 중인
+long legs|긴 다리들
+vowels|모음들
+allergic to cheese|치즈 알레르기가 있는
+seacoast|해안
+desktop computer|데스크톱 컴퓨터
+broken|고장 난
+check email|이메일을 확인하다
+in good shape|몸 상태가 좋은
+on vacation|휴가 중인
+light breakfast|가벼운 아침 식사
+[10|202|문장 연습·쓰기 어휘|154–159|words]
+famous|유명한
+bowl|그릇
+doctor|의사
+finally|마침내
+Chinese|중국의·중국어
+people|사람들
+English|영어
+language|언어
+classroom|교실
+friendly|친근한
+trouble|곤란
+practice|연습
+information|정보
+really|정말로
+giraffes|기린들
+camels|낙타들
+monkeys|원숭이들
+penguins|펭귄들
+leopards|표범들
+cheetahs|치타들
+gazelles|가젤들
+pandas|판다들
+Children’s Day|어린이날
+cloth fish|천으로 만든 물고기
+wind|바람
+successful|성공한
+bill|계산서
+tip|팁
+rock|록 음악
+classical music|클래식 음악
+hobby|취미
+go camping|캠핑을 가다
+forest|숲
+hike|하이킹하다
+fish|낚시하다
+stars|별들
+ghost stories|유령 이야기들
+tent|텐트
+skiing|스키 타기
+hot chocolate|핫초코
+warm fire|따뜻한 모닥불
+[11|101|문법 어휘|162–167|grammar]
+past|과거
+affirmative|긍정의
+negative|부정의
+regular|규칙적인
+irregular|불규칙적인
+verb|동사
+form|형태
+subject|주어
+consonant|자음
+vowel|모음
+syllable|음절
+double|두 번 쓰다
+base|기본의
+did|do의 과거형
+was|be의 과거 단수형
+were|be의 과거 복수형
+didn’t|did not의 줄임말
+wasn’t|was not의 줄임말
+weren’t|were not의 줄임말
+[11|201|Activity 규칙 동사|162–163|words]
+want|원하다
+ask|묻다
+start|시작하다
+seem|~처럼 보이다
+use|사용하다
+play|놀다·경기하다
+look|보다
+appear|나타나다
+help|돕다
+move|움직이다
+show|보여 주다
+report|보고하다
+turn|돌다
+die|죽다
+work|일하다
+include|포함하다
+receive|받다
+decide|결정하다
+try|시도하다
+call|전화하다
+happen|일어나다
+add|더하다
+learn|배우다
+continue|계속하다
+open|열다
+live|살다
+create|만들다
+believe|믿다
+suggest|제안하다
+like|좋아하다
+[11|202|불규칙 동사의 과거형|165–166|words]
+became|되었다
+began|시작했다
+brought|가져왔다
+came|왔다
+felt|느꼈다
+found|찾았다
+got|얻었다
+gave|주었다
+went|갔다
+had|가졌다
+heard|들었다
+held|잡고 있었다
+kept|유지했다
+knew|알았다
+left|떠났다
+lost|잃었다
+made|만들었다
+put|놓았다
+ran|달렸다
+said|말했다
+saw|보았다
+sat|앉았다
+stood|서 있었다
+took|가져갔다
+told|말했다
+thought|생각했다
+wrote|썼다
+ate|먹었다
+drank|마셨다
+woke|잠에서 깼다
+[11|203|Activity 어휘·청크|163–177|words]
+yesterday|어제
+last night|어젯밤
+last week|지난주
+two hours ago|두 시간 전에
+a football game|미식축구 경기
+elementary school|초등학교
+get a cold|감기에 걸리다
+aspirin|아스피린
+high fever|고열
+drugstore|약국
+strong medicine|독한 약
+feel better|상태가 나아지다
+on time|제시간에
+connecting flight|연결 항공편
+reservation|예약
+vacation|휴가
+sometimes|때때로
+important|중요한
+future|미래
+juice|주스
+cousin|사촌
+amazing|놀라운
+pick|고르다·따다
+problem|문제
+reason|이유
+Wednesday|수요일
+usually|보통
+community college|지역 전문대학
+final exam|기말고사
+score|점수
+husband|남편
+unfortunately|불행하게도
+pick her up|그녀를 데리러 가다
+tomato sauce|토마토 소스
+special event|특별한 행사
+birthday dinner|생일 저녁 식사
+surprised|놀라게 했다
+invite|초대하다
+graduation|졸업
+driver’s license|운전면허증
+[12|101|문법 어휘|180–187|grammar]
+complex|복문의
+sentence|문장
+clause|절
+independent|독립적인
+dependent|종속적인
+subject|주어
+verb|동사
+fragment|불완전한 문장
+connector|연결어
+subordinating|종속의
+conjunction|접속사
+reason|이유
+condition|조건
+because|~때문에
+after|~한 뒤에
+before|~하기 전에
+when|~할 때
+if|만약 ~라면
+comma|쉼표
+pronoun|대명사
+repeat|반복하다
+[12|201|Activity 어휘·청크|180–187|words]
+change money|환전하다
+bake a cake|케이크를 굽다
+flour|밀가루
+frosting|프로스팅·케이크 장식 크림
+cool down|식다
+birthday cake|생일 케이크
+candles|양초들
+great voice|훌륭한 목소리
+good grades|좋은 성적
+different alphabet|다른 알파벳
+milk products|유제품
+repair shop|수리점
+Irish families|아일랜드 가족들
+clearly|명확하게
+correctly|올바르게
+pack a suitcase|여행 가방을 싸다
+turn on|켜다
+airline|항공사
+snack|간식
+good news|좋은 소식
+cabinet|찬장
+low price|낮은 가격
+Internet connection|인터넷 연결
+multiply|곱하다
+hurricane|허리케인
+immediately|즉시
+heavy sweater|두꺼운 스웨터
+freeze|얼다
+better job|더 좋은 일자리
+beautiful photos|아름다운 사진들
+[12|202|문장 연습·쓰기 어휘|191–195|words]
+box|상자
+language|언어
+many|많은
+said|말했다
+funny|웃긴
+lemon|레몬
+stop|멈추다
+awful|끔찍한
+please|부디
+everything|모든 것
+never|결코 ~않다
+happen|일어나다
+famous|유명한
+practice|연습
+student|학생
+restaurant|식당
+menu|메뉴
+order|주문하다
+choice|선택
+recommend|추천하다
+creamy cheese|부드러운 치즈
+flavor|맛·풍미
+calories|칼로리
+grill|굽다
+thick|두꺼운
+fork|포크
+steak|스테이크
+types of cheese|치즈의 종류들
+put away|치우다
+new boss|새 상사
+full of ideas|생각이 가득한
+return|돌려주다
+wool sweater|양모 스웨터
+stripes|줄무늬
+first job|첫 직장
+degree|학위
+education|교육
+job posting|구인 공고
+job offer|채용 제안
+accept|받아들이다
+teaching experience|교직 경험
+career|경력
+chef|요리사
+culinary arts|조리학
+[13|101|문법 어휘|198–203|grammar]
+adverb|부사
+verb|동사
+adjective|형용사
+phrase|구
+place|장소
+time|시간
+manner|방식
+frequency|빈도
+degree|정도
+describe|묘사하다
+location|위치
+exception|예외
+object|목적어
+positive|긍정적인
+negative|부정적인
+meaning|의미
+here|여기
+there|저기
+now|지금
+then|그때
+quickly|빠르게
+well|잘
+carefully|조심스럽게
+clearly|명확하게
+currently|현재
+easily|쉽게
+quietly|조용히
+slowly|천천히
+suddenly|갑자기
+fast|빠르게
+hard|열심히
+always|항상
+usually|보통
+often|자주
+sometimes|때때로
+seldom|드물게
+rarely|거의 ~않다
+never|결코 ~않다
+completely|완전히
+extremely|극도로
+incredibly|믿기 어려울 만큼
+really|정말로
+so|매우
+too|지나치게
+very|매우
+[13|201|Activity 어휘·청크|198–211|words]
+special meeting|특별한 회의
+alarm clock|알람 시계
+loudly|큰 소리로
+in a hurry|서둘러
+on time|제시간에
+office workers|사무직 직원들
+co-workers|직장 동료들
+next check|다음 급여 수표
+talkative|말이 많은
+great student|훌륭한 학생
+careful reader|꼼꼼한 독자
+interview|인터뷰하다
+bus station|버스 정류장
+serious|심각한
+exercise|운동하다
+famous|유명한
+kitchen|부엌
+possible|가능한
+contain|담다·포함하다
+family|가족
+paper|종이
+minutes|분들
+student|학생
+money|돈
+clothes|옷
+finally|마침내
+sauce|소스
+reason|이유
+everybody|모든 사람
+island|섬
+northern Japan|일본 북부
+long winters|긴 겨울
+temperature|기온
+degrees Celsius|섭씨 온도
+snow festival|눈 축제
+sculptures|조각상들
+huge|거대한
+popular|인기 있는
+improve|향상시키다
+conversation ability|회화 능력
+chances|기회들
+situation|상황
+strange sound|이상한 소리
+mechanic|정비사
+backyard|뒷마당
+scary movies|무서운 영화들
+round things|둥근 것들
+elderly neighbor|나이 든 이웃
+coffee shop|커피숍
+supermarket|슈퍼마켓
+twice a week|일주일에 두 번
+slow driver|천천히 운전하는 사람
+a line of cars|줄지어 선 차들
+teenage|십 대의
+gym|체육관
+mall|쇼핑몰
+pass|추월하다
+[14|101|문법 어휘|214–217|grammar]
+present|현재
+progressive|진행형의
+action|동작
+verb|동사
+form|형태
+negative|부정의
+non-action|비동작의
+moment|순간
+consonant|자음
+vowel|모음
+syllable|음절
+double|두 번 쓰다
+drop|빼다
+add|더하다
+be|~이다·있다
+like|좋아하다
+need|필요하다
+feel|느끼다
+[14|201|Activity 어휘·청크|215–225|words]
+passenger|승객
+doing business|업무를 보는 중인
+right now|바로 지금
+at this moment|이 순간에
+anything|아무것도
+favorite music|좋아하는 음악
+go|가다
+try|시도하다
+look|보다
+make|만들다
+get|얻다
+use|사용하다
+say|말하다
+come|오다
+work|일하다
+talk|말하다
+take|가져가다
+run|달리다
+play|놀다
+watch|보다
+give|주다
+sit|앉다
+wait|기다리다
+live|살다
+see|보다
+leave|떠나다
+stand|서다
+hold|잡다
+tell|말하다
+ask|묻다
+think|생각하다
+move|움직이다
+decide|결정하다
+put|놓다
+follow|따라가다
+final projects|최종 과제들
+bake|굽다
+tie|묶다
+die|죽다
+plan|계획하다
+mop|대걸레로 닦다
+janitor|청소 관리인
+novel|소설
+text message|문자 메시지
+dentist|치과 의사
+drop|내려가다
+bench|벤치
+take a trip|여행하다
+supermarket|슈퍼마켓
+birthday dinner|생일 저녁 식사
+cashier|계산원
+wait in line|줄을 서서 기다리다
+overhead|머리 위로
+leaves|나뭇잎들
+giraffes|기린들
+monkeys|원숭이들
+funny|웃긴
+airplane|비행기
+a good time|즐거운 시간
+penny|1센트 동전
+storm|폭풍
+arrow|화살표
+exit|출구
+main course|주요 요리
+chicken|닭고기
+beef|소고기
+sad endings|슬픈 결말들
+basketball team|농구팀
+vinegar|식초
+chores|집안일
+bedrooms|침실들
+bathrooms|욕실들
+dining room|식당·식사 공간
+living room|거실
+garage|차고
+yard|마당
+rake|갈퀴로 긁어모으다
+trash bags|쓰레기봉투들
+outdoor furniture|야외용 가구
+basement|지하실
+oldest daughter|맏딸
+youngest daughter|막내딸
+wash windows|창문을 닦다
+put away|치우다
+quickly|빠르게
